@@ -4,8 +4,15 @@ var request = require('request'),
     /* Models */
     Workspace = function(id, name) {
         return {
-            id: id,
-            name: name
+            ID: id,
+            Name: name
+        }
+    },
+
+    SocketEventArgs = function(action, data) {
+        return {
+            action: action,
+            data: data
         }
     },
 
@@ -54,7 +61,11 @@ var request = require('request'),
             };
 
             request.get(requestOptions, function(error, response, body) {
+                body = JSON.parse(body);
                 self.token = body['access_token'];
+
+                console.log('Token refreshed');
+                console.log(self.token);
             });
         },
         /* Workspaces part */
@@ -66,37 +77,39 @@ var request = require('request'),
 
                 if (!this.lastWorkspacesData) {
                     this.lastWorkspacesData = workspaces;
+                    io.sockets.emit('workspaces', new SocketEventArgs('list', api.workspaces.lastWorkspacesData));
                     return;
                 }
 
                 for(workspace in this.lastWorkspacesData) {
                     if (workspaces[workspace] === undefined) {
-                        console.log('Workspace removed');
-                        console.log(this.lastWorkspacesData[workspace]);
+                        /*console.log('Workspace removed');
+                        console.log(this.lastWorkspacesData[workspace]);*/
 
-                        io.sockets.emit('workspace:removed', this.lastWorkspacesData[workspace]);
+                        io.sockets.emit('workspaces', new SocketEventArgs('delete', this.lastWorkspacesData[workspace]));
                     }
                 }
 
                 for(workspace in workspaces) {
                     if (this.lastWorkspacesData[workspace] === undefined) {
-                        console.log('Workspace added');
-                        console.log(workspaces[workspace]);
+                        /*console.log('Workspace added');
+                        console.log(workspaces[workspace]);*/
 
-                        io.sockets.emit('workspace:new', workspaces[workspace]);
-                    }
+                        io.sockets.emit('workspaces',new SocketEventArgs('new', workspaces[workspace]));
 
-                    if (this.lastWorkspacesData[workspace] !== undefined && this.lastWorkspacesData[workspace].name !== workspaces[workspace].name) {
-                        console.log('Workspace name changed');
-                        console.log(workspaces[workspace]);
+                        if (this.lastWorkspacesData[workspace] !== undefined && this.lastWorkspacesData[workspace].name !== workspaces[workspace].name) {
+                            /*console.log('Workspace name changed');
+                            console.log(workspaces[workspace]);*/
 
-                        io.sockets.emit('workspace:nameChanged', workspaces[workspace]);
+                            io.sockets.emit('workspaces',new SocketEventArgs('edit', workspaces[workspace]));
+                        }
                     }
                 }
 
                 this.lastWorkspacesData = workspaces;
             },
             getWorkspaces: function() {
+                console.log('Get workspaces');
                 var headers = api.requestHeaders,
                     requestOptions,
                     self = this;
@@ -115,6 +128,10 @@ var request = require('request'),
                         workspace,
                         workspaces = {};
 
+                    if (!workspaceInfos) {
+                        return;
+                    }
+
                     workspaceInfos = JSON.parse(workspaceInfos);
 
                     for (i = 0, j = workspaceInfos.length; i < j; i++) {
@@ -130,6 +147,14 @@ var request = require('request'),
 
 /* Auth and set intervals on success */
 api.authorize('farrow', 'password!', function() {
+    io.sockets.on('connection', function(socket) {
+        socket.on('workspaces', function() {
+            if (api.workspaces.lastWorkspacesData) {
+                socket.emit('workspaces', new SocketEventArgs('list', api.workspaces.lastWorkspacesData));
+            }
+        })
+    });
+
     setInterval(function() { api.refreshToken(); }, 60000); //Set token refresh every minute
-    setInterval(function() { api.workspaces.getWorkspaces(); }, 3000);
+    setInterval(function() { api.workspaces.getWorkspaces(); }, 2000);
 });
