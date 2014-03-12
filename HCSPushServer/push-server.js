@@ -1,5 +1,5 @@
 var request = require('request'),
-    io = require('socket.io').listen(1112),
+    io = require('socket.io').listen(2222),
 
     /* Models */
     Workspace = function(id, name) {
