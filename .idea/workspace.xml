@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f28c471e-7ab5-4cb1-b756-7c3831cfb553" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/images/level1_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/images/player.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/images/world_tileset.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/data/level1.tmx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/client/data/player.json" />
-      <change type="MOVED" beforePath="C:\!Work\Projects\2DMMO\Game\client\boot.js" afterPath="$PROJECT_DIR$/Game/client/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/World/PNG/world_tileset.png" afterPath="$PROJECT_DIR$/Assets/World/PNG/world_tileset.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/World/PSD/world_tileset.psd" afterPath="$PROJECT_DIR$/Assets/World/PSD/world_tileset.psd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/client/index.html" afterPath="$PROJECT_DIR$/Game/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/TMX/level1.tmx" afterPath="$PROJECT_DIR$/Assets/TMX/level1.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/client/game.js" afterPath="$PROJECT_DIR$/Game/client/game.js" />
     </list>
     <ignored path="2DMMO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,19 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game/client/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="50" selection-start="761" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level1.tmx" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Game/client/data/level1.tmx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="51459">
+            <state line="31" column="29" selection-start="790" selection-end="790" vertical-scroll-proportion="0.565367" vertical-offset="34" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
@@ -429,16 +410,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/client/game.js">
+    <entry file="file://$PROJECT_DIR$/Game/client/data/level1.tmx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="50" selection-start="761" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="952">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="51459">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/client/data/level1.tmx">
+    <entry file="file://$PROJECT_DIR$/Game/client/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="51459">
+        <state line="31" column="29" selection-start="790" selection-end="790" vertical-scroll-proportion="0.565367" vertical-offset="34" max-vertical-offset="969">
           <folding />
         </state>
       </provider>

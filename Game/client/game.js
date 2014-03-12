@@ -29,6 +29,7 @@ function onWindowLoad() {
                 sheet: 'player',
                 direction: DIRECTION.LEFT,
                 type: Q.SPRITE_PLAYER,
+                jumpSpeed: -400,
                 collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_GROUND | Q.SPRITE_PLATFORM
             });
 
