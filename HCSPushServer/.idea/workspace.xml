@@ -26,7 +26,7 @@
       <file leaf-file-name="push-server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/push-server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="27" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.79931194" vertical-offset="408" max-vertical-offset="2907">
+            <state line="110" column="21" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.79931194" vertical-offset="1173" max-vertical-offset="2907">
               <folding />
             </state>
           </provider>
@@ -188,9 +188,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://C:/Program Files (x86)/Global Emergency Resources/HC Standard/Manager/AdminClient.exe.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="58" selection-start="7422" selection-end="7455" vertical-scroll-proportion="0.33333334" vertical-offset="1694" max-vertical-offset="2839">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/push-server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="27" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.79931194" vertical-offset="408" max-vertical-offset="2907">
+        <state line="110" column="21" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.79931194" vertical-offset="1173" max-vertical-offset="2907">
           <folding />
         </state>
       </provider>

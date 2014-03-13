@@ -101,13 +101,13 @@ var request = require('request'),
                         console.log(workspaces[workspace]);*/
 
                         io.sockets.emit('workspaces',new SocketEventArgs('new', workspaces[workspace]));
+                    }
 
-                        if (this.lastWorkspacesData[workspace] !== undefined && this.lastWorkspacesData[workspace].name !== workspaces[workspace].name) {
-                            /*console.log('Workspace name changed');
-                            console.log(workspaces[workspace]);*/
+                    if (this.lastWorkspacesData[workspace] !== undefined && this.lastWorkspacesData[workspace].Name !== workspaces[workspace].Name) {
+                        /*console.log('Workspace name changed');
+                         console.log(workspaces[workspace]);*/
 
-                            io.sockets.emit('workspaces',new SocketEventArgs('edit', workspaces[workspace]));
-                        }
+                        io.sockets.emit('workspaces',new SocketEventArgs('edit', workspaces[workspace]));
                     }
                 }
 
