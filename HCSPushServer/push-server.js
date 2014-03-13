@@ -61,6 +61,11 @@ var request = require('request'),
             };
 
             request.get(requestOptions, function(error, response, body) {
+                if (!body) {
+                    self.refreshToken();
+                    return;
+                }
+
                 body = JSON.parse(body);
                 self.token = body['access_token'];
 
