@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f28c471e-7ab5-4cb1-b756-7c3831cfb553" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/client/game.js" afterPath="$PROJECT_DIR$/Game/client/game.js" />
-    </list>
+    <list default="true" id="f28c471e-7ab5-4cb1-b756-7c3831cfb553" name="Default" comment="" />
     <ignored path="2DMMO.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
